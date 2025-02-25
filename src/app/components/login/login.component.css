@@ -1,0 +1,22 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* ממקם את הכרטיס באמצע הדף */
+}
+
+.login-card {
+  width: 350px;
+  padding: 20px;
+  text-align: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+button {
+  width: 100%;
+}
