@@ -1,0 +1,15 @@
+<div class="container">
+  <mat-card class="form-card">
+    <mat-card-title class="title1">Welcome to Our Platform</mat-card-title>
+    <div class="switch-buttons">
+      <button mat-raised-button color="primary" class="switch-button" (click)="showLogin = true">Login</button>
+      <button mat-raised-button color="accent" class="switch-button" (click)="showLogin = false">Register</button>
+    </div>
+    @if(showLogin){
+    <app-login></app-login>
+    }
+    @else{
+    <app-register-user></app-register-user>
+    }
+  </mat-card>
+</div>

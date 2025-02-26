@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { AuthService } from '../../services/auth.service';
-
+// import { Observable } from 'rxjs';
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -14,12 +14,12 @@ import { AuthService } from '../../services/auth.service';
     MatInputModule,
     MatFormFieldModule,
     MatButtonModule,
-    MatCardModule,
+    MatCardModule,  
   ],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   errorMessage: string = '';
 
@@ -28,6 +28,8 @@ export class LoginComponent {
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]]
     });
+  }
+  ngOnInit() {
   }
 
   getEmailErrorMessage() {
@@ -54,7 +56,7 @@ export class LoginComponent {
 
   onSubmit() {
     if (this.loginForm.valid) {
-      console.log('Login Data:', this.loginForm.value);
+      // console.log('Login Data:', this.loginForm.value);
       this.authService.login(this.loginForm.value.email, this.loginForm.value.password).subscribe(
         (response: any) => {
           console.log('Login successful', response);
@@ -68,4 +70,5 @@ export class LoginComponent {
     }
   }
 }
+
 

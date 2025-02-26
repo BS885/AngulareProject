@@ -29,11 +29,12 @@
                     Submit
                 </button>
             </form>
+            @if("errorMessage"){
+            <div class="error-message">
+                <mat-error>{{ errorMessage }}</mat-error>
+            </div>
+            }
         </mat-card-content>
     </mat-card>
-    @if("errorMessage"){
-    <div class="error-message">
-        <mat-error>{{ errorMessage }}</mat-error>
-    </div>
-    }
+
 </div>

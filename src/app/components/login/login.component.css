@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* ממקם את הכרטיס באמצע הדף */
+  height: 100vh; 
 }
 
 .login-card {
@@ -19,4 +19,12 @@
 
 button {
   width: 100%;
+}
+
+.eror-message {
+  color: red;
+  margin: 90px;
+}
+.mat-mdc-form-field-bottom-align::before{
+  margin-top: 5px;
 }
