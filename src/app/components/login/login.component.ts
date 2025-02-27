@@ -56,11 +56,11 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     if (this.loginForm.valid) {
-      // console.log('Login Data:', this.loginForm.value);
       this.authService.login(this.loginForm.value.email, this.loginForm.value.password).subscribe(
         (response: any) => {
-          console.log('Login successful', response);
-          localStorage.setItem('token', response.token);
+          console.log('Login successful');
+          sessionStorage.setItem('token', response.token);
+          this.errorMessage = '';
         },
         (error: any) => {
           console.error('Login failed', error);

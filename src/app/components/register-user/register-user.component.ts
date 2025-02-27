@@ -54,7 +54,7 @@ export class RegisterUserComponent implements OnInit {
   onSubmit() {
     if (this.registerForm.valid) {
       console.log('Register Data:', this.registerForm.value);
-      this.authService.register(this.registerForm.value.name, this.registerForm.value.email, this.registerForm.value.password, this.registerForm.value.role).subscribe(
+      this.authService.register(this.registerForm.value).subscribe(
         (response: any) => {
           console.log('Registration successful', response);
         },

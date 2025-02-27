@@ -1,0 +1,36 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button (click)="toggleSidebar()" class="menu-button">
+        <mat-icon>menu</mat-icon>
+    </button>
+</mat-toolbar>
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav mode="side" position="end" [(opened)]="isSidebarOpen" class="sidebar"
+        [class.expanded]="isSidebarOpen">
+        <mat-nav-list>
+            <a mat-list-item routerLink="/">
+                <span class="menu-text">דף הבית</span>
+                <mat-icon class="menu-icon">home</mat-icon>
+               
+            </a>
+            <!-- <a mat-list-item routerLink="/login">
+                <mat-icon class="menu-icon">login</mat-icon>
+                <span class="menu-text">התחברות/הרשמה</span>
+            </a> -->
+            <a mat-list-item routerLink="/courses">
+                <span class="menu-text">קורסים</span>
+                <mat-icon class="menu-icon">school</mat-icon>
+            </a>
+            <a mat-list-item routerLink="/my-courses">
+                <span class="menu-text">הקורסים שלי</span>
+                <mat-icon class="menu-icon">library_books</mat-icon>
+            </a>
+            <a mat-list-item routerLink="/manage-courses">
+                <span class="menu-text">ניהול קורסים</span>
+                <mat-icon class="menu-icon">manage_accounts</mat-icon>
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
