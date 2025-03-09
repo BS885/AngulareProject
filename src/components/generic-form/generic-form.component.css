@@ -1,0 +1,79 @@
+mat-card {
+    background-color: #ffffff; 
+    color: #333;
+    border-radius: 12px; /* עיגול קצוות מעט יותר גדול */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* צל עדין יותר */
+    max-width: 90vw;
+    height: auto; /* מאפשר לגובה להתאים את עצמו לתוכן */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 4% 5%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* הוספת מעבר חלק */
+}
+
+mat-card:hover {
+    transform: translateY(-5px); /* הרמה קלה ב-hover */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); /* צל מודגש יותר ב-hover */
+}
+
+mat-card-header {
+    background: linear-gradient(45deg, #004AAD, #007AFF);
+    color: #fff;
+    padding: 20px; /* הגדלת ה-padding */
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+mat-card-content {
+    padding: 24px; /* הגדלת ה-padding */
+    font-size: 1.1em;
+    text-align: center;
+    flex-grow: 1;
+}
+
+mat-card-title {
+    font-size: 1.8em; /* הגדלת גודל הכותרת */
+    font-weight: 600; /* שימוש ב-font-weight קל יותר */
+}
+
+mat-card-actions {
+    padding: 20px;
+    text-align: center; /* מרכוז הכפתור */
+}
+
+mat-card-actions {
+    display: flex;
+    justify-content: center;
+}
+
+mat-card-actions button {
+    background-color: #007AFF;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+
+}
+
+mat-card-actions button:hover {
+    background-color: #005BBB;
+}
+.fieldForm{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+.massege{
+    text-align: center;
+    font-size: 0.7em;
+    color: #fc0000;
+}

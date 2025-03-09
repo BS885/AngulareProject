@@ -1,0 +1,83 @@
+.menu-button {
+    position: fixed;
+    bottom: 20px;
+    top: 2%;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #004AAD, #007AFF);
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 24px;
+}
+
+.container-page {
+    min-height: 100vh;
+}
+
+.menu-button:hover {
+    background: linear-gradient(45deg, #004AAD, #007AFF);
+    transform: scale(1.1);
+}
+
+.sidenav-container {
+    height: 100vh;
+    min-width: 100vw;
+    margin-right: 0px;
+    align-items: center;
+    
+}
+
+mat-sidenav {
+    width: 0px;
+    overflow: hidden;
+    background-color: #f8f9fa;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+mat-sidenav.expanded {
+    width: 200px;
+}
+
+.sidebar {
+    right: 0px;
+    margin-right: 2%;
+}
+
+mat-nav-list {
+    padding-top: 20px;
+    text-align: right;
+    margin-top: 20%;
+}
+
+mat-list-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 50px;
+}
+
+mat-list-item:hover {
+    background-color: rgba(63, 81, 181, 0.1);
+}
+
+.menu-icon {
+    margin-left: 8px;
+    color: #3f51b5;
+}
+
+.menu-text {
+    text-align: right;
+    flex-grow: 1;
+    white-space: nowrap;
+}

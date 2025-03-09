@@ -1,0 +1,84 @@
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mat-form-field {
+  width: 100%;
+} 
+
+.error-message {
+  color: #ff4d4d;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.register-link{
+  direction: rtl;
+}
+mat-card {
+  background-color: #ffffff; 
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 90vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 4% 5%;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* הוספת מעבר חלק */
+}
+
+mat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+mat-card-header {
+  background: linear-gradient(45deg, #004AAD, #007AFF);
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px 12px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+mat-card-content {
+  padding: 24px;
+  font-size: 1.1em;
+  text-align: center;
+  flex-grow: 1;
+}
+
+mat-card-title {
+  font-size: 1.8em; 
+  font-weight: 600;
+}
+
+mat-card-actions {
+  padding: 20px;
+  text-align: center;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: center;
+}
+
+mat-card-actions button {
+  background-color: #007AFF;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+
+}
+
+mat-card-actions button:hover {
+  background-color: #005BBB;
+}

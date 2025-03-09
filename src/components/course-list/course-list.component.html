@@ -1,0 +1,24 @@
+<div class="courses-list">
+    <h2 class="header">
+        <mat-icon>menu_book</mat-icon> רשימת קורסים
+    </h2>
+
+    @if("courses$ | async as courses")
+    {
+        <div class="courses-container">
+            @for(course of courses$ | async ;track course.id)
+            {    
+                <course-card [course]="course" [icon]="'visibility'" [textBottun]="'צפה'" (finish)="loadCourses()"></course-card>
+            }
+        </div>
+    }
+
+    <ng-template #loading>
+        <div class="loading-container">
+            <mat-spinner></mat-spinner>
+            <p>
+                <mat-icon>hourglass_empty</mat-icon> טוען קורסים...
+            </p>
+        </div>
+    </ng-template>
+</div>

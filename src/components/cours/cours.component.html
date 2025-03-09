@@ -1,0 +1,72 @@
+<div class="cours">
+    @if(course$ )
+    {
+    <ng-container>
+        <mat-card>
+            <mat-card-content>
+                <h3>רשימת שיעורים:</h3>
+                @if(lessons$)
+                {
+                <mat-list>
+                    @for(lesson of lessons$ | async ; track lesson.id)
+                    {
+                    <mat-list-item>
+                        {{ lesson.title }}
+                        @if(isTeacher())
+                        {
+                            <mat-icon (click)="removeLesson(lesson.id)">delete</mat-icon>
+                            <mat-icon (click)="openEditLessonDialog(lesson)">edit</mat-icon>
+                        }
+                        @else
+                        {
+                            <mat-icon>play_circle</mat-icon>
+                        }
+
+                    </mat-list-item>
+                    }
+                </mat-list>
+                }
+                @else
+                {
+                <ng-template>
+                    <p>אין שיעורים זמינים לקורס זה.</p>
+                </ng-template>
+                }
+            </mat-card-content>
+            <mat-card-actions>
+                @if(!isTeacher()){
+                @if(!attache)
+                {
+                <button mat-button class="attached" (click)="addCourse()">
+                    <mat-icon class="card-icon">school</mat-icon> הצטרפו לקורס
+                </button>
+                }
+                @if(attache)
+                {
+                <button mat-button class="attached" (click)="leaveCourse()">
+                    <mat-icon class="card-icon">logout</mat-icon> עזוב את קורס
+                </button>
+                }
+                }
+                @else{
+                <button mat-button class="attached" (click)="addLesson()">
+                    <mat-icon class="card-icon">add lasson</mat-icon> הוסף שיעור
+                </button>
+
+                }
+            </mat-card-actions>
+        </mat-card>
+    </ng-container>
+
+    }
+    @else
+    {
+    <ng-template #loading>
+        <p> טוען פרטי קורס...</p>
+    </ng-template>
+    }
+</div>
+@if(addLessonFormVisible){
+    
+<add-lesson-to-course [courseID]="courseID" (courseAdded)="onCourseAdded($event)"></add-lesson-to-course>
+}

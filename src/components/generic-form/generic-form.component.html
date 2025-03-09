@@ -1,0 +1,37 @@
+ <mat-card>
+  <mat-card-header>
+    <mat-card-title>{{title}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form [formGroup]="itemForm" (ngSubmit)="onSubmit()" class="max-w-md mx-auto p-6 bg-white rounded-md shadow-md">
+      <div class="mb-4">
+        <label for="title" class="block text-gray-700 text-sm font-bold mb-2">{{ titleLabel }}:</label>
+        <input id="title" formControlName="title"
+        class="fieldForm" required />
+        @if(itemForm.get('title')?.invalid && itemForm.get('title')?.touched){
+        <div class="massege">
+          כותרת חובה (3 תווים לפחות).
+        </div>
+        }
+      </div>
+
+      <div class="mb-4">
+        <label  for="content" class="labalInput">{{ contentLabel }}:</label>
+        <textarea id="content" formControlName="content"
+          class="fieldForm"
+          required></textarea>
+        @if(itemForm.get('content')?.invalid && itemForm.get('content')?.touched){
+        <div class="massege">
+          {{ contentLabel }} חובה (10 תווים לפחות).
+        </div>
+        }
+      </div>
+      <mat-card-actions>
+        <button type="submit" [disabled]="itemForm.invalid"
+          class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:shadow-outline">
+          {{ submitButtonLabel }}
+        </button>
+      </mat-card-actions>
+    </form>
+  </mat-card-content>
+</mat-card>

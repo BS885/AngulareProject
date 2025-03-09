@@ -1,0 +1,98 @@
+.cours {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+mat-card {
+    background-color: #ffffff;
+    color: #333;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    direction: rtl;
+}
+
+mat-card-header {
+    background: linear-gradient(45deg, #004AAD, #007AFF);
+    color: #fff;
+    padding: 24px;
+    border-radius: 12px 12px 0 0;
+}
+
+mat-card-title {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+mat-card-subtitle {
+    font-size: 1.2em;
+    color: #e3e3e3;
+}
+
+mat-card-content {
+    padding: 24px;
+    font-size: 1.2em;
+    text-align: center;
+    flex-grow: 1;
+}
+
+mat-card-actions {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background: #007AFF;
+    color: #ffffff;
+    border-radius: 0 0 12px 12px;
+}
+
+.attached {
+    background: #004AAD;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 12px 24px;
+    margin: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.attached:hover {
+    background-color: #005BBB;
+}
+
+mat-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+mat-icon {
+    margin-right: 10px;
+    width: 24px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
