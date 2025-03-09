@@ -17,6 +17,8 @@ import { LessonsService } from "../../services/lessons.service";
 import { MatDialog } from "@angular/material/dialog";
 import { EditLessonComponent } from "../edit-lesson/edit-lesson.component";
 import { MatSnackBar } from "@angular/material/snack-bar";
+import { HighlightDirective } from "../../directivs/highlight.directive";
+import { EllipsisPipe } from "../../pipes/ellipsis.pipe";
 
 @Component({
   selector: 'app-cours',
@@ -27,7 +29,8 @@ import { MatSnackBar } from "@angular/material/snack-bar";
     MatCardModule,
     MatIconModule,
     RouterOutlet,
-    AddLessonToCourseComponent],
+    AddLessonToCourseComponent,
+    HighlightDirective,EllipsisPipe],
   templateUrl: './cours.component.html',
   styleUrls: ['./cours.component.css']
 })

@@ -7,6 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { Router } from '@angular/router';
 import { CoursesService } from '../../services/courses.service';
 import { EditCourseComponent } from '../edit-course/edit-course.component';
+import { EllipsisPipe } from '../../pipes/ellipsis.pipe';
 
 @Component({
   selector: 'course-card',
@@ -17,7 +18,8 @@ import { EditCourseComponent } from '../edit-course/edit-course.component';
       MatGridListModule,
       MatButtonModule,
       MatIconModule,
-      EditCourseComponent
+      EditCourseComponent,
+      EllipsisPipe
     ],
   templateUrl: './course-card.component.html',
   styleUrl: './course-card.component.css'

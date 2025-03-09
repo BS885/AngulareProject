@@ -1,7 +1,7 @@
 <mat-card class="course-card">
   <mat-card-header>
     <mat-card-title>
-      <mat-icon>school</mat-icon> {{ course.title }}
+      <mat-icon>school</mat-icon> {{ course.title | ellipsis:30}}
     </mat-card-title>
     <mat-card-subtitle>
       <mat-icon>person</mat-icon> הוראה על ידי {{ course.teacherId }}
@@ -9,7 +9,7 @@
   </mat-card-header>
   <mat-card-content>
     <p>
-      <mat-icon>description</mat-icon> {{ course.description }}
+      <mat-icon>description</mat-icon> {{ course.description | ellipsis:50}}
     </p>
   </mat-card-content>
   <mat-card-actions>
